@@ -6,7 +6,7 @@ async function redesSociaisFavoritasMinhaEscola() {
         const dadosLocais = JSON.parse(dadosLocaisString)
         processarDados(dadosLocais)
     } else {
-        const url = 'https://script.googleusercontent.com/macros/echo?user_content_key=rSe23zaQC7gOvWgFJbdtPaqh7ewsO5hQmusYOeqdorTRN8C25vVV3BicsPoS6HS3jnJY9NHhy_pNZj6prQdxDH3305Mro8vNm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnPvESZ9fvnAeFWqfIvIacdoRZcVMZ-nDSydw9_0gseo2TN3y60rOTtwDBCYnKQf6yIqgf8yOzNfccjP633C9VnHmUmPZvRBJY9z9Jw9Md8uu&lib=MCARBaBtNBMHKiEwMeRap3j6V_G7SlGWF'
+        const url = 'https://script.google.com/macros/s/AKfycbyfkuh3lClumLkQQ8k87mgusELqDAW7Bb34et5hB93D6rEyllQrPsFhuA2cwy_vB7px/exec'
         const res = await fetch(url)
         const dados = await res.json()
         localStorage.setItem('respostaRedesSociais', JSON.stringify(dados))
@@ -43,6 +43,7 @@ function processarDados(dados) {
                 color: getCSS('--primary-color'),
                 family: getCSS('--font'),
                 size: 30
+            
             }
         },
         legend: {
